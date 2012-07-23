@@ -5,7 +5,7 @@
 window.fbAsyncInit = function() {
   FB.init({
     appId      : '341812065894310', // App ID
-    channelUrl : '//77.127.91.230:3000/channel.html', // Channel File
+    channelUrl : '//http://agile-wave-6717.herokuapp.com/channel.html', // Channel File
     status     : true, // check login status
     cookie     : true, // enable cookies to allow the server to access the session
     xfbml      : true  // parse XFBML
