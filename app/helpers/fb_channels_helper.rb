@@ -1,0 +1,2 @@
+module FbChannelsHelper
+end

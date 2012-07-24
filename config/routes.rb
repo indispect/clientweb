@@ -1,4 +1,6 @@
 Clientweb::Application.routes.draw do
+  resources :fb_channels
+
   get "home/index"
 
   # The priority is based upon order of creation:

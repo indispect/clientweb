@@ -1,0 +1,22 @@
+<%= javascript_include_tag "fb_channels" %>
+<h1>Listing fb_channels</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @fb_channels.each do |fb_channel| %>
+  <tr>
+    <td><%= link_to 'Show', fb_channel %></td>
+    <td><%= link_to 'Edit', edit_fb_channel_path(fb_channel) %></td>
+    <td><%= link_to 'Destroy', fb_channel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Fb channel', new_fb_channel_path %>
