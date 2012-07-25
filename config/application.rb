@@ -58,9 +58,6 @@ module Clientweb
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
-    
-    # fb config
-    config.fb.app_id = '341812065894310'
-    config.uri       = 'http://agile-wave-6717.herokuapp.com'
+
   end
 end
