@@ -1,15 +1,10 @@
 class FbChannelsController < ApplicationController
-  @app_id = '341812065894310'
+  
   # GET /fb_channels
   # GET /fb_channels.json
   def index
     @fb_channels = FbChannel.all
-      @_dialog_url = "http://www.facebook.com/dialog/oauth?client_id=" 
-        $app_id "&redirect_uri=" request.url "&state="
-        session[:secret]
-    if params[:code].empty?
-      
-    end
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @fb_channels }
