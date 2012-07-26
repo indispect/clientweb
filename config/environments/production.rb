@@ -61,6 +61,11 @@ Clientweb::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
+  # production application domain name
+  APP_DOMAIN = "http://agile-wave-6717.herokuapp.com" 
+  
+  FB_APP_ID = '341812065894310'
+
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5

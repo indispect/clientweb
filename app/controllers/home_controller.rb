@@ -1,11 +1,10 @@
 class HomeController < ApplicationController
   
-    @app_id = '341812065894310'
-    @uri       = 'http://agile-wave-6717.herokuapp.com'  
   def index
-    session[:oauth] = Koala::Facebook::OAuth.new(@app_id, session[:secret], @uri + '/home/callback')
-    @auth_url =  session[:oauth].url_for_oauth_code(:permissions=>"read_stream")  
-    puts session.to_s + "<<< session"
+    
+    session[:oauth] = Koala::Facebook::OAuth.new(FB_APP_ID, session[:secret], APP_DOMAIN + '/home/callback')
+      @auth_url =  session[:oauth].url_for_oauth_code(:permissions=>"read_stream")  
+      puts session.to_s + "<<< session"
     
     
     respond_to do |format|

@@ -1,23 +1,21 @@
-<html>
-<style type="text/css">
-body {
-	font-family:arial;
-	font-size:1.25em;
-	margin-left:20px;
-	margin-top:40px;
-	}
-a {text-decoration:none;}
-a.button {
- background-color:green;
- cursor:pointer;
- color:#ffffff;
- padding:3 10 5 10px;
- -moz-border-radius: 3px;
-	border-radius: 3px;
- 
-}
-</style>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+  <title>Clientweb</title>
+  <%= stylesheet_link_tag    "home", :media => "all" %>
+  <%= csrf_meta_tags %>
+</head>
 <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=" + "<%= FB_APP_ID %>";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>	
+<%= javascript_include_tag "home" %>
 <%= yield %>
+
 </body>
 </html>

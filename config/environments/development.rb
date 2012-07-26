@@ -34,4 +34,9 @@ Clientweb::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  
+  # Development application domain name
+  APP_DOMAIN = "localhost:3000"  
+  
+  FB_APP_ID = '341812065894310'
 end

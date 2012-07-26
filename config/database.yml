@@ -6,10 +6,10 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: db/development.postgresql
+  database: db/development_postgresql
   pool: 5
-  username: root
-  password:
+  username: postgres
+  password: root
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -17,10 +17,10 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: db/test.postgresql
+  database: db/test_postgresql
   pool: 5
-  username: root
-  password:
+  username: postgres
+  password: root
 
 production:
   adapter: postgresql

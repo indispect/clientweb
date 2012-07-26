@@ -1,5 +1,15 @@
-<!-- <%= javascript_include_tag "home" %> -->
-<!-- <h1>Indispect</h1> -->
-<!-- <div id="fb-root"></div> -->
+<h1>Indispect</h1>
+
 <!-- <div class="fb-login-button">Login with Facebook</div> -->
-<%= link_to 'Authenticate this Facebook app', @auth_url, :class=>"button"%>
+<h1>Facebook Client-side Authentication Example</h1>
+<div id="auth-status">
+  <div id="auth-loggedout">
+  	<div class="fb-login-button" data-show-faces="true" data-width="200" data-max-rows="1">Login with facebook</div>
+      <a href="#" id="auth-loginlink"><div class="fb-login-button">Login with Facebook</div></a>
+  </div>
+  <div id="auth-loggedin" style="display:none">
+      Hi, <span id="auth-displayname"></span>  
+    (<a href="#" id="auth-logoutlink">logout</a>)
+  </div>
+</div>
+<!-- <%= link_to 'Authenticate this Facebook app', @auth_url, :class=>"button"%> -->
