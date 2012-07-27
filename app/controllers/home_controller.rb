@@ -14,12 +14,13 @@ class HomeController < ApplicationController
   end
   
   def callback
+    
+    puts session.to_s + "<<< session"
+    
     if params[:code]
       # acknowledge code and get access token from FB
       session[:access_token] = session[:oauth].get_access_token(params[:code])
-    end   
-
-    puts session.to_s + "<<< session"
+    end
      # auth established, now do a graph call:
 
     @api = Koala::Facebook::API.new(session[:access_token])
