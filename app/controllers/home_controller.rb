@@ -14,8 +14,9 @@ class HomeController < ApplicationController
   end
   
   def callback
-    @url_access_token = @oauth.url_for_access_token(params[:code])
-    puts @url_access_token + "<<< url"
+    url_access_token = @oauth.url_for_access_token(params[:code])
+    puts params[:code] + " <<< code"
+    puts url_access_token + "<<< url"
     
     if params[:code]
       # acknowledge code and get access token from FB
