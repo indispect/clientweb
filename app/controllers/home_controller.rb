@@ -14,7 +14,7 @@ class HomeController < ApplicationController
   end
   
   def callback
-    url_access_token = @oauth.url_for_access_token(params[:code])
+    url_access_token = session[:oauth].url_for_access_token(params[:code])
     puts params[:code] + " <<< code"
     puts url_access_token + "<<< url"
     
