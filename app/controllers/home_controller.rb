@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+  protect_from_forgery :secret => "123456789012345678901234567890..."
   
   def index
     
