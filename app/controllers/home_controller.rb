@@ -27,20 +27,20 @@ class HomeController < ApplicationController
     end
      # auth established, now do a graph call:
 
-    @api = Koala::Facebook::API.new(session[:access_token])
-    begin
-      @graph_data = @api.get_object("/me/statuses", "fields"=>"message")
-    rescue Exception=>ex
-      puts ex.message
-    end
+    #@api = Koala::Facebook::API.new(session[:access_token])
+    #begin
+    #  @graph_data = @api.get_object("/me/statuses", "fields"=>"message")
+    #rescue Exception=>ex
+    #  puts ex.message
+    #end
     
 
-    uri = URI.parse("http://google.com/")
+    uri = URI.parse(INDISPECT_SERVER+'/set_fb_user?token='+session[:access_token])
 
     # Shortcut
     response = Net::HTTP.get_response(uri)
 
-  
+    puts response.to_s + "<< response"
     respond_to do |format|
      format.html {   }       
     end

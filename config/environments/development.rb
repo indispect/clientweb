@@ -36,7 +36,9 @@ Clientweb::Application.configure do
   config.assets.debug = true
   
   # Development application domain name
-  APP_DOMAIN = 'http://agile-wave-6717.herokuapp.com'  
+  APP_DOMAIN = 'http://agile-wave-6717.herokuapp.com'
+  
+  INDISPECT_SERVER = 'http://powerful-thicket-4432.herokuapp.com'  
   
   FB_APP_ID = '341812065894310'
 end
