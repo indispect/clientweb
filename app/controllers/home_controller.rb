@@ -7,7 +7,9 @@ class HomeController < ApplicationController
   def index
     
     session[:oauth] = Koala::Facebook::OAuth.new(FB_APP_ID, '67ed7e25657a5142b57a33c564cb833d', APP_DOMAIN + '/home/callback')
-      @auth_url =  session[:oauth].url_for_oauth_code(:permissions=>"read_stream")  
+      @auth_url =  session[:oauth].url_for_oauth_code(:permissions=>"user_about_me,
+      user_activities,user_birthday,user_checkins,user_education_history,user_events,user_groups,
+      user_hometown,user_interests,user_likes,user_location,user_status,user_work_history,read_stream")  
       puts session.to_s + "<<< session"
     
     
