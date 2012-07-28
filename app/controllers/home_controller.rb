@@ -1,3 +1,6 @@
+require "net/http"
+require "uri"
+
 class HomeController < ApplicationController
   protect_from_forgery
   
@@ -30,6 +33,12 @@ class HomeController < ApplicationController
     rescue Exception=>ex
       puts ex.message
     end
+    
+
+    uri = URI.parse("http://google.com/")
+
+    # Shortcut
+    response = Net::HTTP.get_response(uri)
 
   
     respond_to do |format|
