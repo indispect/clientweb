@@ -25,7 +25,7 @@ class HomeController < ApplicationController
     
     if params[:code]
       # acknowledge code and get access token from FB
-      session[:access_token] = session[:oauth].get_access_token(params[:code])
+      session[:access_token] = url_access_token
     end
      # auth established, now do a graph call:
 
