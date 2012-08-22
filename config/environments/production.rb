@@ -67,6 +67,11 @@ Clientweb::Application.configure do
   FB_APP_ID = '341812065894310'
 
   INDISPECT_SERVER = 'http://powerful-thicket-4432.herokuapp.com'
+  
+  CLIENTWEB_APP_ID = 'tjXpeZVX5oXb+A=='
+  
+  CLIENTWEB_SECRET = 'oS6nUN3FX2pZcmET6zaAA+FLDSZ3ho/sIv5KGkt/WDE='
+  
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
