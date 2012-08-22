@@ -25,7 +25,7 @@ class HomeController < ApplicationController
     
     if params[:code]
       
-      put_s "HERE!!!"
+      puts "HERE!!!"
       
       puts url_access_token.to_s + "<<<<<<<<<<<<<<<<"
       # acknowledge code and get access token from FB
