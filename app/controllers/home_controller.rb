@@ -38,7 +38,7 @@ class HomeController < ApplicationController
     
     uri = URI.parse(INDISPECT_SERVER+'/login?appId='+CLIENTWEB_APP_ID+'&secret=' + CLIENTWEB_SECRET)
 
-    
+    puts uri.to_s + "<<<<<<<<<<<<<<<"
 
     # Shortcut
     response = Net::HTTP.get_response(uri)
@@ -46,6 +46,8 @@ class HomeController < ApplicationController
     data = response.body
     
     result = JSON.parse(data)
+    
+    puts result.to_s + "<<<<<<<<<<<<<<<<"
 
     uri = URI.parse(INDISPECT_SERVER+'/set_fb_user?fbToken='+session[:access_token]+'&indiToken='+result[:indi_token])
     
