@@ -61,6 +61,9 @@ module Clientweb
 
     @graph = Koala::Facebook::API.new
     
+    CLIENTWEB_APP_ID = 'tjXpeZVX5oXb+A=='
+    
+    CLIENTWEB_SECRET = 'oS6nUN3FX2pZcmET6zaAA+FLDSZ3ho/sIv5KGkt/WDE='
     
   end
 end
