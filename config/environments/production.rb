@@ -68,9 +68,9 @@ Clientweb::Application.configure do
 
   INDISPECT_SERVER = 'http://powerful-thicket-4432.herokuapp.com'
   
-  CLIENTWEB_APP_ID = '586a3e521fafffffdd12'
+  CLIENTWEB_APP_ID = 'd029eda59cf3123090fc'
   
-  CLIENTWEB_SECRET = '9ea082e75dbe205f9e7f950dae26f645b80788be3e4f5ec7ae5eb24e23543235'
+  CLIENTWEB_SECRET = 'c22df5fd6543161d3ba6d096b0c59ec46a239d14bd44cf767e4d1ce5e8a1ce8f'
   
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
