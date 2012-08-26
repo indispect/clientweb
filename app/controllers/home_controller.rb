@@ -49,6 +49,8 @@ class HomeController < ApplicationController
     
     data = response.body
     
+    puts data.to_s
+    
     result = JSON.parse(data)
     
     puts result.to_s + "         result  <<<<<<<<<<<<<<<<"
