@@ -47,9 +47,11 @@ class HomeController < ApplicationController
     # Shortcut
     response = Net::HTTP.get_response(uri)
     
+    puts response.to_s + "  <<<<<<<<<<< resp"
+    
     data = response.body
     
-    puts data.to_s
+    puts data.to_s + "  <<<<<<"
     
     result = JSON.parse(data)
     
