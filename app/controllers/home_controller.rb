@@ -46,18 +46,12 @@ class HomeController < ApplicationController
 
     # Shortcut
     response = Net::HTTP.get_response(uri)
-    
-    puts response.to_s + "  <<<<<<<<<<< resp"
-    
+        
     data = response.body
-    
-    puts data.to_s + "  <<<<<<"
-    
+        
     result = JSON.parse(data)
     
-    puts result['indi_token'].to_s + "         result  <<<<<<<<<<<<<<<<"
-
-    uri = URI.parse(INDISPECT_SERVER+'/set_fb_user?fbToken='+session[:access_token]+'&indiToken='+result[:indi_token])
+    uri = URI.parse(INDISPECT_SERVER+'/set_fb_user?fbToken='+session[:access_token]+'&indiToken='+result['indi_token'])
     
     puts response.to_s + "<< response"
     respond_to do |format|
