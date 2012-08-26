@@ -55,7 +55,7 @@ class HomeController < ApplicationController
     
     result = JSON.parse(data)
     
-    puts result.to_s + "         result  <<<<<<<<<<<<<<<<"
+    puts result[:indi_token].to_s + "         result  <<<<<<<<<<<<<<<<"
 
     uri = URI.parse(INDISPECT_SERVER+'/set_fb_user?fbToken='+session[:access_token]+'&indiToken='+result[:indi_token])
     
