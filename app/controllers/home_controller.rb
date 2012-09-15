@@ -53,7 +53,14 @@ class HomeController < ApplicationController
     
     uri = URI.parse(INDISPECT_SERVER+'/set_fb_user?fbToken='+session[:access_token]+'&indiToken='+result['indi_token'])
     
+    response = Net::HTTP.get_response(uri)
+    
     puts response.to_s + "<< response"
+    
+    uri = URI.parse(INDISPECT_SERVER+'/get_campaign')
+    
+    response = Net::HTTP.get_response(uri)
+    
     respond_to do |format|
      format.html {   }       
     end
